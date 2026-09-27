@@ -1,2 +1,10 @@
 node_modules/
+coverage/
 .env
+.env.local
+.env.development
+.env.test
+.env.production
+*.log
+npm-debug.log*
+.DS_Store

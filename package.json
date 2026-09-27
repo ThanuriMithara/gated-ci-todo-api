@@ -1,21 +1,29 @@
 {
-  "name": "ci-cd-devops",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-  "test": "jest",
-  "start": "node server.js"
-},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "express": "^5.2.1"
-  },
-  "devDependencies": {
-    "jest": "^30.4.2",
-    "supertest": "^7.2.2"
-  }
+    "name":  "gated-ci-todo-api",
+    "version":  "1.0.0",
+    "description":  "A simple Todo REST API with a Gated CI/CD pipeline using GitHub Actions",
+    "main":  "server.js",
+    "scripts":  {
+                    "start":  "node server.js",
+                    "test":  "jest --coverage",
+                    "lint":  "eslint ."
+                },
+    "keywords":  [
+                     "ci",
+                     "cd",
+                     "devops",
+                     "github-actions",
+                     "todo-api"
+                 ],
+    "author":  "ThanuriMithara",
+    "license":  "ISC",
+    "type":  "commonjs",
+    "dependencies":  {
+                         "express":  "^5.2.1"
+                     },
+    "devDependencies":  {
+                            "eslint":  "^9.17.0",
+                            "jest":  "^30.4.2",
+                            "supertest":  "^7.2.2"
+                        }
 }
