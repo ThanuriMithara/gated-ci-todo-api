@@ -14,4 +14,14 @@ app.post('/todos', (req, res) => {
   res.status(201).json(todo);
 });
 
+app.delete('/todos/:id', (req, res) => {
+  const id = parseInt(req.params.id, 10);
+  const index = todos.findIndex((t) => t.id === id);
+  if (index === -1) {
+    return res.status(404).json({ error: 'Todo not found' });
+  }
+  const deleted = todos.splice(index, 1)[0];
+  res.status(200).json({ message: 'Todo deleted successfully', todo: deleted });
+});
+
 module.exports = app;
